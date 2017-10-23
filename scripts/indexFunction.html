@@ -1,0 +1,55 @@
+</DOCTYPE html>
+
+<html>
+
+<head>
+
+</head>
+	
+<body>
+	<script type="text/javascript">
+	function funky(){
+		alert("Ouch !!!");
+	}
+	funky();
+	
+	function funky2(){
+		alert("Amazing!");
+	}
+	
+	
+	function city(x){
+		alert("I love" + x);
+	}
+	
+	city(" Prague!");
+	city(" Helsinki!");
+	city(" Stockholm!");
+	city(" Barcelona!");
+	
+	
+	function number(cesky, cinsky){
+		document.write(cesky + " is better than " + cinsky + "<br/>");
+	}
+	
+	number("Nula", "Jeden");
+	number("Dva","Ctyri");
+	number("Patnact","Devadesat");
+	
+	function addNumber(a,b){
+		var c = a+b;
+		return c;
+	}
+	
+	document.write(addNumber(3,6));
+	
+	
+	</script>
+	
+	<form>
+		<input type="button" value="Touch Amazing" onclick="funky2()"></input>
+	</form>
+	
+	
+</body>
+</html>

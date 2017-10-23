@@ -1,0 +1,24 @@
+/*site.css*/
+header,#footer{
+	font-family:'Times New Roman';serif;
+	border:solid 3px darkblue;
+	color:#ccc;
+	background-color:grey;
+	padding:5px;
+	margin:10px 0 20px 0;
+	border-radius:8px;
+}
+#footer{
+	border-radius:20px;
+	font-size:18px;
+}
+section{
+	font-family:serif;
+	border:solid 3px lightpink;
+	color:yellow;
+	background-color:grey;
+	padding:8px;
+	margin:20px 0;
+	border-radius:15px;
+	font-size:20px;
+}

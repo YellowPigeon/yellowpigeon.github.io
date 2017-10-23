@@ -1,0 +1,88 @@
+/*site3.css*/
+.border1{
+	border:solid 2px pink;
+	border-radius:10px;
+	margin:10px 10px;
+	background-color:lightgrey;
+}.border2{
+	border:solid 3px skyblue;
+	border-radius:15px;
+	margin:18px 0;
+	padding:10px;
+}
+.border3{
+	font-family:serif;
+	font-size:18px;
+	font-weight:bold;
+	color:grey;
+	border:solid 1px purple;
+	border-radius:5px;
+	padding:10px;
+	margin:15px 3px;
+}
+.section{
+	border:solid 1px lightgrey;
+	border-radius:5px;
+	
+}
+.simple-form{
+	padding:10px;
+	width:300px;
+	display:inline-block;
+	vertical-align:top;
+}
+.simple-form label{
+	font-weight:bold;
+	font-size:18px;
+	color:grey;
+	padding:10px;
+}
+.simple-form input[type=text],
+.simple-form select{
+	width:100px;
+	border:solid 2px green;
+	border-radius:5px;
+	padding:5px;
+}
+.simple-form input[type=button]{
+	background-color:lightblue;
+	color:white;
+	border:solid 1px black;
+	border-radius:15px;
+	padding:10px;
+	margin:10px;
+	font-weight:bold;
+	font-size:20px;
+	padding:5px;
+}
+.footer{
+	padding:10px;
+}
+.container{
+	width:989px;
+	margin:0 auto;
+	padding:8px;
+	background-color:white;
+}
+.body{
+	background-color:lightgreen;
+}
+html,body{
+	padding:0;
+	margin:0;
+}
+#result{
+	padding:2px;
+	width:600px;
+	display:inline-block;
+	vertical-align:top;
+}
+header nav li{
+	float:right;
+	margin-right:5px;
+	display:inline;
+}
+a{
+	color:green;
+	size:12px;
+}

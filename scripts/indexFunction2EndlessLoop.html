@@ -1,0 +1,45 @@
+</DOCTYPE html>
+
+<html>
+
+<head>
+
+</head>
+	
+<body>
+	<script type="text/javascript">
+	function doFirst(){
+		document.write("I am the first! ");
+	}
+	
+	function doSecond(){
+		document.write("Here is the second one! ");
+	};
+	
+	function takeAction(){
+		doFirst();
+		doSecond();
+	};
+	
+	takeAction();
+	
+	function doFirst(){
+		document.write(" first ");
+		doSecond();
+	};
+	
+	function doSecond(){
+		document.write("second");
+		doFirst();
+	};
+	
+	doFirst();
+	</script>
+	
+	<form>
+		<input type="button" value="Touch Amazing" onclick="funky2()"></input>
+	</form>
+	
+	
+</body>
+</html>

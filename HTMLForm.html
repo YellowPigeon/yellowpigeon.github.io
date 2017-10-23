@@ -1,0 +1,72 @@
+<DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>HTML Form</title>
+		<link rel="stylesheet" href="html/site.css"/>
+	</head>
+	<body>
+		<h1><abbr title="Hypertext Markup Language ">HTML </abbr>Form</h1>
+		<form id="main">
+			<h2>How to Create <abbr title ="Hypertext Markup Language">HTML</abbr> Form</h2>
+				<input type="text" name="query1"></input>
+				<input type="text" name="query2"></input>
+				<input type="submit" value="Submit"></input>
+				<h3>Text Input</h3>
+					<h4>Profile Information</h4>
+						<fieldset>
+							<legend>Contact Information</legend>
+								<label for="Firstname" accesskey="o">First Name: </label><input type="text" size="20" maxlength="20" id="Firstname" name="Firstname" tabindex="1" maxlength="5"></input><br />
+								Family name: <input type="text" size="20" maxlength="20" id="Familyname" name="Familyname"tabindex="4"></input><br />
+								Password: <input type="password" id="psd" name="password" tabindex="2"><br/>
+										<input type="hidden" id="nothing" name="nothing"></input></input><br/>
+								Disable text: <input type="text" id="nothing" name="nothing" disabled value="foo"></input><br/>
+								Username:<input type="text" id="username" name="username" readonly value="olayh"></input><br/>
+								Email: <input type="email" id="Email" Name="Email" tabindex="3"></input><br />
+						</fieldset>
+						<fieldset>
+							<legend accesskey="i">Information 2</legend>
+								Contact No.: <input type="text" id="Contact No." name="Contact"tabindex="5"></input><br />
+								Bio:<br/>
+								<textarea rows="5" cols="80" tabindex="6"></textarea>
+						</fieldset>
+						<fieldset>
+				<h3>Selection List</h3>
+					<h4>Occupation</h4>
+						<select id="occupation" name="occupation" row="8" tabindex="12">
+							<optgroup label="Technical">
+								<option value="Developer">Developer</option>
+								<option value="Web designer">Web Designer</option>	
+							</optgroup>
+							<optgroup label="Non-Technical" name="Non-Technical">
+								<option value="Manager" selected>Manager</option>
+								<option value="Consultant">Consultant</option>
+							</optgroup>
+							<option value="Other" name="Other">Other</option>
+						</select>
+						
+				<h3>Check Box</h3>
+					Gender:
+					<label><input type="radio" id="male" name="gender" value="male" tabindex="7">male</input></label>
+					<input type="radio" id="female" name="gender" value="female" tabindex="8" checked>female</input>
+					
+				<h3>Preferences</h3>
+					<input type="checkbox" id="preference1" name="preference" value="newletter" tabindex="11">Send me newsletter to my email address</input>
+					<input type="checkbox" id="preference2" name="preference" value="partner" tabindex="10">Send me a partner offer</input>
+					<input type="checkbox" id="preference3" name="preference" value="marketing" tabindex="9">Send me marketing materials</input>
+					</fieldset>
+		<div class="clear">
+				<h3>Input Command</h3>
+					<input type="submit" name="submit" value="Submit"></input>
+					<input type="reset" name="reset" value="Start over"></input>
+					<input type="image" src="image/cat.jpg" width="50" height="50" alt="cat" name="Imagesubmit" value="true"></input>
+					<input type="button" value="pushbutton" onclick="alert('hello')"></input>
+					<button type="submit" value="true" name="buttonsubmit">
+						<span style="text-declaration:underline; color:green">Button with content</span>
+					</button>
+		</div>
+		</form>
+	</body>
+	<foot>
+	</foot>
+</html>
