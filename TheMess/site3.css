@@ -4,7 +4,8 @@
 	border-radius:10px;
 	margin:10px 10px;
 	background-color:lightgrey;
-}.border2{
+}
+.border2{
 	border:solid 3px skyblue;
 	border-radius:15px;
 	margin:18px 0;

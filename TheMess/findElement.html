@@ -1,0 +1,25 @@
+<html>
+    <head>
+
+    </head>
+    <body>
+        <script>
+        function howLong(x, value){
+            var sth = document.getElementById(x).value.length;
+            
+            document.write("length of element with id " + x + " is " + sth + "and value is"+ value);
+        }   
+        </script>
+        <input id="something" type="text"></input>
+        <button id="save" onclick="howLong('something', document.getElementById('something').value)">CLICK!!!</button>
+        
+        <input id="something1" type="text"></input>
+        <button id="save1" onclick="howLong('something1', ' nerozumim javascriptu')">CLICK!!!</button>
+        
+        <input id="something2" type="text"></input>
+        <button id="save2" onclick="howLong('something2')">CLICK!!!</button>
+        
+        <input id="something3" type="text"></input>
+        <button id="save3" onclick="howLong('something3')">CLICK!!!</button>
+    </body>
+</html>

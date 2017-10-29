@@ -6,6 +6,18 @@
         </head>
         <body>
             <script>
+                function errorFunction(x){
+                    var elementId = document.getElementById(x);
+                    var length = elementId.value.length;
+                    if(length>5){
+                        elementId.style="color:red";
+                        document.getElementById("nameError").hidden = false;
+                    }else{
+                        elementId.style="color:purple";
+                        document.getElementById("nameError").hidden= true;
+                    }
+                };
+
                 function searchFunction(){
                     document.getElementById("results").hidden= false;
                     var search1 = document.getElementById("name").value;
@@ -13,16 +25,6 @@
                     var search3 = document.getElementById("genre").value;
                     var writeResults = document.getElementById("results");
                     writeResults.innerHTML = writeResults.innerHTML + "<tr><td>" + search1 + "</td><td>" + search2 + "</td><td>" + search3 + "</td></tr>";
-                };
-                function errorFunction(){
-                    var length = document.getElementById("name").value.length;
-                    if(length>5){
-                        document.getElementById("name").style="color:red";
-                        document.getElementById("nameError").hidden = false;
-                    }else{
-                        document.getElementById("name").style="color:purple";
-                        document.getElementById("nameError").hidden= true;
-                    }
                 };
             </script>
             <h1>Search Page</h1>
@@ -32,15 +34,15 @@
                         <table>
                             <tr>
                                 <td>Singer Name</td>
-                                <td><input type="text" name="singerName" id="name" oninput="errorFunction()"></input></td>
+                                <td><input type="text" name="singerName" id="name" oninput="errorFunction('name')"></input></td>
                             </tr>
                             <tr>
                                 <td>Song name</td>
-                                <td><input type="text" name="songName" id="song"></input></td>
+                                <td><input type="text" name="songName" id="song" oninput="errorFunction('song')"></input></td>
                             </tr>
                             <tr>
                                 <td>Genre</td>
-                                <td><input type="text" name="genre" id="genre"></input></td>
+                                <td><input type="text" name="genre" id="genre" oninput="errorFunction('genre')"></input></td>
                             </tr>
                         </table>
                         <input type="button" value="Save" onclick="searchFunction()"></input>

@@ -22,3 +22,10 @@ section{
 	border-radius:15px;
 	font-size:20px;
 }
+#button{
+	border: solid 3px green;
+	background-color: lightgray;
+	padding: 8px;
+	font-family: serif;
+	font-size: 18px;
+}
