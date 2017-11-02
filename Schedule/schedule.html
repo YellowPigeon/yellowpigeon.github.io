@@ -1,0 +1,183 @@
+<DOCTYPE html>
+    <html>
+        <head>
+            <title>Schedule</title>
+            <meta charset="UTF-8">
+            <link rel="stylesheet" type="text/css" href="schedule.css">
+        </head>
+        <body>
+            <script type="text/javascript">
+               function saveSelection(){
+                   alert("Hello! Check your selection!!");
+                   document.getElementById("displaySchedule").hidden=false;
+                   var selection1 = document.getElementById("date").value;
+                   var selection2 = document.getElementById("selectCity").value;
+                   var selection3 = document.getElementById("accomodation").value;
+                   var selection4 = document.getElementById("selectTransportation").value;
+                   var selection5 = document.getElementById("notes").value;
+                   var displaySchedule = document.getElementById("displaySchedule");
+                   displaySchedule.innerHTML = displaySchedule.innerHTML + "<tr><td>" + selection1 + "</td><td>" + selection2 + "</td><td>" + selection3 + "</td><td>" + selection4 + "</td><td>" + selection5 +"</td><tr>"
+               };
+               function lengthError(ItemId){
+                   var length = document.getElementById(ItemId).value.length;
+                   if(length<0){
+                       document.getElementById(ItemId).style="color:red";
+                       document.getElementById("lengthReminder").hidden=false
+                   }else{
+                       document.getElementById(ItemId).style="color:blue";
+                       document.getElementById("lengthReminder").hidden=true;
+                   }
+               };
+            </script>
+            <h1>Welcome!</h1>
+                <img src="img/autumn.JPG" alt="Colorful Autumn" width="1200" height="500">
+                <caption><p>Colorful Autumn</p></caption>
+                <h2><img src="img/view.JPG" alt="start your journey" height="300" width="1200"><p>Start Your Journey in Colorful Autumn!</p></h2>
+                <h3 class="head3"><img src="img/dream.JPG" alt="fill in" class="picture">Fill in your travling schedule</h3>
+                    <div>
+                        <table name="scheduleTable" id="scheduleTable" class="scheduleTable">
+                            <tr class="row1">
+                                <td>Date</td>
+                                <td><input type="date" id="date"></td>
+                            </tr>
+                            <tr class="row1">
+                                <td>City</td>
+                                <td><select name="selectCity" id="selectCity">
+                                    <optgroup label="China">
+                                        <option label="Beijing">Beijing</option>
+                                        <option label="Shanghai">Shanghai</option>
+                                        <option label="Guangdong">Guangdong</option>
+                                        <option label="Xian">Xian</option>
+                                    </optgroup>
+                                    <optgroup label="Czech">
+                                        <option label="Prague">Prague</option>
+                                        <option label="Ostrava" selected>Ostrava</option>
+                                        <option label="Brno">Brno</option>
+                                    </optgroup>
+                                </select></td>
+                            </tr>
+                            <tr class="row1">
+                                <td>Accomodation</td>
+                                <td><input type="text" id="accomodation" oninput="lengthError('accomodation')"></td>
+                            </tr>
+                             <tr class="row1">
+                                <td>Transportation</td>
+                                <td><select name="selectTransportation" id="selectTransportation">
+                                    <optgroup label="transportation">
+                                        <option label="Airpalane">Airpalane</option>
+                                        <option label="Train">Train</option>
+                                        <option label="Taxi">Taxi</option>
+                                        <option label="Public Bus" selected>Public Bus</option>
+                                        <option label="By walking">By Walking</option>
+                                        <option label="Others">Others</option>
+                                    </optgroup></select></td>
+                            </tr>
+                            <tr class="row1">
+                                <td>Notes</td>
+                                <td><textarea id="notes" oninput="lengthError('notes')"></textarea>
+                                </td>
+                            </tr>
+                        </table>
+                        <input type="submit" id="saveSelection" onclick="saveSelection()" value="Save"></input>
+                        <p name="lengthReminder" id="lengthReminder" hidden="true">Please enter your request! </p>
+                    </div>
+                    <div>
+                        <table name="displaySchedule" id="displaySchedule" hidden="true" class="displaySchedule">
+                            <tr class="row2">
+                                <th>Date</th>
+                                <th>City</th>
+                                <th>Accomodation</th>
+                                <th>Transportation</th>
+                                <th>Notes</th>
+                            </tr> 
+                        </table>                                                                  
+                    </div>
+                <h3 class="head3"><img src="img/hateyou.JPG" alt="food reference" class="picture">Food Reference</h3>
+                    <list>
+                        <ul><u><em>Starters</em></u>
+                            <li>Smoked salmon</li>
+                            <li>Ham roll</li>
+                        </ul>
+                        <ul><u><em>Soup</em></u>
+                            <li>Potato soup</li>
+                            <li>Mushroom soup</li>
+                            <li>Tomato soup</li>
+                        </ul>
+                        <ol type="A" start="1"><u><em>Main dishes</em></u>
+                            <li>Roast goose, dumplngs and cabbage</li>
+                            <li>Roast chicken, mashed potapoes</li>
+                            <li>Roast turkey and potapoes</li>
+                        </ol>
+                        <ol type="a" start="2" reversed="true"><u><em>Pasta</em></u>
+                            <li>Spaghetti bologness</li>
+                            <li>Penne, tomato puree and mozzarella</li>
+                        </ol>
+                        <ol type="1" start="4" reversed="true"><u><em>Salad</em></u>
+                            <li>Mixed vegetables salad</li>
+                            <li>Cucumber salad</li>
+                            <li>Tomato salad</li>
+                            <li>Mixed vagetables with feta cheese</li>
+                        </ol>
+                        <ul><u><em>Drinks</em></u>
+                            <li>Cold</li>
+                                <ol type="I" start="2">
+                                    <li>Large on top,0.3L=small</li>
+                                    <li>dark beer, bottoled, 0.5L=large</li>
+                                    <li>orange juice</li>
+                                    <li>mineral water</li>
+                                    <li>still water</li>
+                                </ol>
+                            <li>Warm</li>
+                                <ol type="1" start="10" reversed="true">
+                                    <li>Black tea</li>
+                                    <li>Green tea</li>
+                                    <li>Coffee with wipped cream</li>
+                                    <li>Hot chocolate</li>
+                                    <li>hot toddy, lemon</li>
+                                    <li>Mulled wine</li>
+                                </ol>
+                        </ul>
+                    </list>
+                <h3 class="head3"><img src="img/loveyou.JPG" alt="hotel" class="picture">Hotel Reference</h3>
+                <div class="hotelclass"><table id="hotelExperience" class="hotelExperience">
+                    <caption>Hotel Experience</caption>
+                    <th>Date</th>
+                    <th>Hotel Name</th>
+                    <th>Location</th>
+                    <th>Experience</th>
+                    <th>Recomend</th>
+                    <th>Notes</th>
+                    <tr class="row3">
+                        <td>30th Oct.</td>
+                        <td>Peanut Homee</td>
+                        <td>Prague,Cz</td>
+                        <td>Amazing</td>
+                        <td>&#9786;&#9786;&#9786;&#9786;</td>
+                        <td rowspan="3">None</td>
+                    </tr>
+                    <tr class="row3">
+                        <td>1st Nov.</td>
+                        <td>Anana Family</td>
+                        <td>Bankok,Thailand</td>
+                        <td>Prima</td>
+                        <td>&#9786;&#9786;&#9785;</td>
+                    </tr>
+                    <tr class="row3">
+                        <td>2nd Nov.</td>
+                        <td>SuperSober Palace</td>
+                        <td>Ostrava,Cz</td>
+                        <td>Fantastic</td>
+                        <td>&#9733;&#9733;&#9733;&#9733;&#9733;</td>
+                    </tr>
+                    <tr class="row3">
+                        <td>3th Nov.</td>
+                        <td>Dancing House</td>
+                        <td>Brno,Cz</td>
+                        <td>Horrible</td>
+                        <td>&#9785;&#9785;&#9785;</td>
+                        <td>None</td>
+                    </tr>
+                </table>
+            </div>
+        </body>
+    </html>
