@@ -1,3 +1,13 @@
 .site-header {
-    background-color: green
+    
+}
+
+img {
+    padding: 10px;
+    box-shadow: black 2px 2px 15px 0px;
+    margin: 20px auto;
+}
+
+* {
+    font-family: monospace;
 }
