@@ -20,7 +20,11 @@ absolute_url: "https://yellowpigeon.github.io" # the base hostname & protocol fo
 # twitter_username: jekyllrb
 github_username:  YellowPigeon
 
-show_excerpts: false
+header_pages: 
+  - about
+
+
+show_excerpts: true
 
 # Build settings
 markdown: kramdown

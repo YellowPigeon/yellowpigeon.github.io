@@ -24,16 +24,29 @@ layout: default
     <ul class="post-list">
       {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
       {%- for post in posts -%}
-      <li>
-        <span class="post-meta">{{ post.date | date: date_format }}</span>
-        <h3>
-          <a class="post-link" href="{{ post.url | relative_url }}">
-            {{ post.title | escape }}
-          </a>
-        </h3>
-        {%- if site.show_excerpts -%}
-          {{ post.excerpt }}
+      <li class="card">
+        {%- if post.photo -%}
+        <img src="{{post.photo}}" alt="card photo" class="card-img-top">
         {%- endif -%}
+        <div class="card-body">
+          <h5 class="card-title">
+            {{ post.title | escape }}
+          </h5>
+          <p class="card-text">
+            <span class="post-meta">{{ post.date | date: date_format }}</span>
+            {%- if site.show_excerpts -%}
+            {{ post.excerpt }}
+            {%- endif -%}
+
+          </p>
+          <a class="btn btn-success" href="{{ post.url | relative_url }}">
+            Read more...
+          </a>
+        </div>
+
+        <h3>
+                 </h3>
+        
       </li>
       {%- endfor -%}
     </ul>

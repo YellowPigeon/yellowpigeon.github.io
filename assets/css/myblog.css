@@ -1,13 +1,27 @@
-.site-header {
-    
+/*.wrapper {
+    margin-left: 120px !important;
+}*/
+
+.card .btn{
+    color: rgb(243, 231, 231) !important;
+    background-color: rgb(107, 160, 122) ;
 }
 
-img {
-    padding: 10px;
-    box-shadow: black 2px 2px 15px 0px;
-    margin: 20px auto;
+.bd-navbar {
+    min-height: 2rem;
+    background-color: #3E6259;
+    box-shadow: #212922 0 3px 12px 3px;
+    top: 0;
+    position: sticky;
+    z-index: 1300;
+}
+.site-title {
+    color: rgb(243, 231, 231) !important;
+    margin-left: 10px;
 }
 
-* {
-    font-family: monospace;
+.logo {
+    width: 45px;
+    height: auto;
+    float: left;
 }
